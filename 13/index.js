@@ -55,3 +55,25 @@ console.log(__dirname);
 console.log(__filename);
 
 
+//  Events for NodeJs
+
+var count = 0;
+
+var print = function() {
+	count++;
+	console.log('click', count);
+};
+
+var count = require('events');
+var emt = new Event();
+
+emt.on('click', print);
+// emt.addListener('click', print);
+// emt.once('click', print);
+
+emt.emit('click');
+// em.emit('click');
+
+
+
+
