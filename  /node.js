@@ -1,19 +1,9 @@
-var Event = require('event').EventEmitter;
+var Event = require('events').EventEmitter;
 
-var emt = new Event();
+emt.on('myEvent', function(a, b){
+    console.log('Arguments:', arguments.length);
+    console.log('Params', arguments.callee.length);
+    // console.log(a, b);
+};
 
-emt.on('event', function(){
-    setTimeout(function(){
-        console.log('Listener 1');
-    }, 0);
-});
-emt.on('event', function(){
-    setImmediate(function(){
-        console.log('Listener 2');
-    }, 0);
-});
-emt.on('event', function(){
-    console.log('Listener 3');
-});
-
-emt.emit('event');
+emt.emit('myEvent', 2, 5, 6, 'hello');
