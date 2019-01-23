@@ -49,3 +49,9 @@ var app = http.createServer(function(req, res) {
 	console.log('Server at http://localhost:3000')
 	
 });
+
+//  Lesson 14
+console.log(__dirname);
+console.log(__filename);
+
+
