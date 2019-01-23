@@ -36,7 +36,7 @@ var http = require('http');
 
 var app = http.createServer(function(req, res) {
 	res.write('Hello from Node.js');
-	res.end();
+	res.end(); //loading...
 }).listen(3000, function(){
 	console.log('Server at http://localhost:3000')
 	
